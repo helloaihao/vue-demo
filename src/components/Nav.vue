@@ -35,9 +35,7 @@
       const num = 8;
   
       const arr = Array.from(Array(num), (v, i) => i);
-  
-      console.log(arr);
-  
+
       arr.forEach(i => this.lists.push(i));
     },
   };
