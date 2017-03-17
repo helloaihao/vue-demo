@@ -1,24 +1,44 @@
 <template>
-  <div>
-    <nav v-for="list in lists">
-      <a v-bind:href="list">demo{{list}}</a>
+    <nav class="clearfix">
+      <router-link class="link" v-for="list in lists" :key="list" :to="'nav/' + list">
+        demo{{list}}
+      </router-link>
     </nav>
-  </div>
 </template>
+
+<style>
+  .link {
+    display: block;
+    float: left;
+    padding: 0 20px;
+  }
+  
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+</style>
 
 <script>
   export default {
     name: 'nav',
-    data () {
+    data() {
       return {
-          lists: []
-      }
+        lists: [],
+      };
     },
-    created () {
-      let num = 8;
-      for(let i = 0; i < num; i ++) {
-        this.lists.push(i);
-      }
-    }
-}
+    created() {
+      const num = 8;
+  
+      const arr = Array.from(Array(num), (v, i) => i);
+  
+      console.log(arr);
+  
+      arr.forEach(i => this.lists.push(i));
+    },
+  };
 </script>
