@@ -27,7 +27,7 @@
     },
   
     created() {
-      const num = 8;
+      const num = 6;
   
       const arr = Array.from(Array(num), (v, i) => i + 1);
   
