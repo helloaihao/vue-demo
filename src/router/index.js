@@ -1,13 +1,17 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Hello from '@/components/Hello';
-import Nav from '@/components/Nav';
+import main from '@/main.vue';
+
+import demoNavList from '@/views/demoNavList';
 import demo1 from '@/demo/1';
 import demo2 from '@/demo/2';
 import demo3 from '@/demo/3';
 import demo4 from '@/demo/4';
 import demo5 from '@/demo/5';
 import demo6 from '@/demo/6';
+
+import exampleNavList from '@/views/exampleNavList';
+import todoList from '@/example/todoList';
 
 Vue.use(Router);
 
@@ -16,17 +20,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello,
-    },
-    {
-      path: '/nav',
-      name: 'Nav',
-      component: Nav,
+      component: main,
     },
     {
       path: '/demo',
-      component: Nav,
+      name: 'demo',
+      component: demoNavList,
       children: [
         {
           path: '1',
@@ -55,6 +54,21 @@ export default new Router({
         {
           path: ':id',
           component: demo1,
+        },
+      ],
+    },
+    {
+      path: '/example',
+      name: 'example',
+      component: exampleNavList,
+      children: [
+        {
+          path: 'todoList',
+          component: todoList,
+        },
+        {
+          path: ':id',
+          redirect: 'todoList',
         },
       ],
     },

@@ -14,7 +14,7 @@
     data() {
       return {
         question: '',
-        result: _.capitalize('hello aihao'),
+        result: 'Yes',
       };
     },
   
