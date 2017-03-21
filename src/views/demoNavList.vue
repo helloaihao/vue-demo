@@ -1,6 +1,7 @@
 
 <template>
   <div>
+    <h1>demo</h1>
     <NavList :dir="dir"
              :lists="lists">
     </NavList>

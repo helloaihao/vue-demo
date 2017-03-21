@@ -1,6 +1,7 @@
 
 <template>
   <div>
+    <h1>example</h1>
     <NavList :dir="dir"
              :lists="lists">
     </NavList>
@@ -17,6 +18,7 @@ export default {
       dir: '/example/',
       lists: [
         'todoList',
+        'transitionGroup',
       ],
     };
   },

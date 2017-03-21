@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>学习VUE</h1>
-    demo: <demoNavList></demoNavList>
-    example: <exampleNavList></exampleNavList>
+    <demoNavList></demoNavList>
+    <exampleNavList></exampleNavList>
   </div>
 </template>
 
