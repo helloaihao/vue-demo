@@ -19,6 +19,7 @@ export default {
       lists: [
         'todoList',
         'transitionGroup',
+        'tree',
       ],
     };
   },

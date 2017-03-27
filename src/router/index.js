@@ -13,6 +13,7 @@ import demo6 from '@/demo/6';
 import exampleNavList from '@/views/exampleNavList';
 import todoList from '@/example/todoList';
 import transitionGroup from '@/example/transitionGroup';
+import tree from '@/example/tree';
 
 Vue.use(Router);
 
@@ -70,6 +71,10 @@ export default new Router({
         {
           path: 'transitionGroup',
           component: transitionGroup,
+        },
+        {
+          path: 'tree',
+          component: tree,
         },
         {
           path: ':id',
