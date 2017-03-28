@@ -14,6 +14,7 @@ import exampleNavList from '@/views/exampleNavList';
 import todoList from '@/example/todoList';
 import transitionGroup from '@/example/transitionGroup';
 import tree from '@/example/tree';
+import todoMVC from '@/example/todoMVC';
 
 Vue.use(Router);
 
@@ -75,6 +76,10 @@ export default new Router({
         {
           path: 'tree',
           component: tree,
+        },
+        {
+          path: 'todoMVC',
+          component: todoMVC,
         },
         {
           path: ':id',

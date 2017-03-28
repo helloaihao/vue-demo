@@ -20,6 +20,7 @@ export default {
         'todoList',
         'transitionGroup',
         'tree',
+        'todoMVC',
       ],
     };
   },
