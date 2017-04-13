@@ -104,7 +104,6 @@ export default {
       },
 
       set(value) {
-        /* eslint-disable no-param-reassign*/
         this.todos.forEach(todo => (todo.completed = value));
       },
     },
